@@ -1,0 +1,10 @@
+* SPICE3 file created from /home/lab/Documents/lab-Act/inversor/inversor.ext - technology: scmos
+
+.option scale=10n
+
+M1000 out in gnd Gnd nfet w=400 l=200
++  ad=0.2u pd=1.8m as=0.2u ps=1.8m
+M1001 out in vdd vdd pfet w=800 l=200
++  ad=0.4u pd=2.6m as=0.4u ps=2.6m
+C0 out 0 3.95f **FLOATING
+C1 in 0 7.86f **FLOATING
