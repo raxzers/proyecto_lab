@@ -1,0 +1,13 @@
+* SPICE3 file created from /home/lab/Documents/lab-Act/NAND/nand-V0.ext - technology: scmos
+
+.option scale=1u
+
+M1000 a_1_n10# vdd gnd Gnd nfet w=4 l=4
++  ad=22p pd=15u as=32p ps=24u
+M1001 vdd vdd vdd vdd pfet w=4 l=4
++  ad=22p pd=15u as=72p ps=76u
+M1002 vdd vdd vdd vdd pfet w=4 l=4
++  ad=0 pd=0 as=32p ps=24u
+M1003 vdd vdd a_1_n10# Gnd nfet w=4 l=4
++  ad=28p pd=22u as=22p ps=15u
+C0 vdd 0 32.8f **FLOATING

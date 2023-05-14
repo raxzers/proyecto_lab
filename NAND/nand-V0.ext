@@ -1,0 +1,16 @@
+timestamp 1684024935
+version 8.3
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "a_1_n10#" 73 0 1 -10 ndiff 44 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "gnd!" 87 9588 -11 -10 ppc 16 16 16 16 0 0 0 0 0 0 0 0 220 118 0 0 0 0
+node "sal" 7871 32792 -13 6 nw 60 62 72 76 320 176 0 0 0 0 0 0 592 328 0 0 680 114
+equiv "sal" "E1"
+equiv "sal" "E2"
+equiv "sal" "vdd!"
+device mosfet nfet 12 -10 13 -9 4 4 "Gnd!" "sal" 8 0 "a_1_n10#" 4 22,15 "sal" 4 28,22
+device mosfet nfet -3 -10 -2 -9 4 4 "Gnd!" "sal" 8 0 "gnd!" 4 32,24 "a_1_n10#" 4 22,15
+device mosfet pfet 12 8 13 9 4 4 "sal" "sal" 8 0 "sal" 0 0 "sal" 8 22,15
+device mosfet pfet -3 8 -2 9 4 4 "sal" "sal" 8 0 "sal" 8 32,24 "sal" 0 0
