@@ -1,16 +1,25 @@
-timestamp 1684024935
+timestamp 1684113152
 version 8.3
 tech scmos
 style lambda=1.0(scna20_orb)
 scale 1000 1 100
 resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
-node "a_1_n10#" 73 0 1 -10 ndiff 44 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "gnd!" 87 9588 -11 -10 ppc 16 16 16 16 0 0 0 0 0 0 0 0 220 118 0 0 0 0
-node "sal" 7871 32792 -13 6 nw 60 62 72 76 320 176 0 0 0 0 0 0 592 328 0 0 680 114
-equiv "sal" "E1"
-equiv "sal" "E2"
-equiv "sal" "vdd!"
-device mosfet nfet 12 -10 13 -9 4 4 "Gnd!" "sal" 8 0 "a_1_n10#" 4 22,15 "sal" 4 28,22
-device mosfet nfet -3 -10 -2 -9 4 4 "Gnd!" "sal" 8 0 "gnd!" 4 32,24 "a_1_n10#" 4 22,15
-device mosfet pfet 12 8 13 9 4 4 "sal" "sal" 8 0 "sal" 0 0 "sal" 8 22,15
-device mosfet pfet -3 8 -2 9 4 4 "sal" "sal" 8 0 "sal" 8 32,24 "sal" 0 0
+node "a_0_n28#" 53 0 0 -28 ndiff 72 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "gnd!" 626 5828 -12 -28 ndc 48 28 48 48 0 0 0 0 0 0 0 0 196 106 0 0 0 0
+node "a_16_2#" 68 0 16 2 pdiff 0 0 56 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_0_2#" 102 0 0 2 pdiff 0 0 84 38 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "out" 105 12079 -12 2 pdc 48 28 56 30 0 0 0 0 0 0 0 0 433 202 0 0 0 0
+node "In2" 358 14656 12 -30 p 0 0 0 0 240 128 0 0 0 0 0 0 44 30 0 0 0 0
+node "In1" 358 14656 -4 -30 p 0 0 0 0 240 128 0 0 0 0 0 0 44 30 0 0 0 0
+node "vdd!" 4240 1880 -16 -5 nw 70 58 0 0 0 0 0 0 0 0 0 0 314 142 0 0 1334 150
+cap "vdd!" "out" 2632
+cap "out" "In2" 600
+cap "out" "a_16_2#" 1316
+cap "out" "In1" 600
+cap "vdd!" "In2" 4032
+cap "vdd!" "In1" 4032
+cap "vdd!" "a_0_2#" 1316
+device mosfet nfet 12 -28 13 -27 4 6 "Gnd!" "In2" 8 0 "a_0_n28#" 6 36,18 "out" 6 48,28
+device mosfet nfet -4 -28 -3 -27 4 6 "Gnd!" "In1" 8 0 "gnd!" 6 48,28 "a_0_n28#" 6 36,18
+device mosfet pfet 12 2 13 3 4 7 "vdd!" "In2" 8 0 "a_0_2#" 7 42,19 "a_16_2#" 7 56,30
+device mosfet pfet -4 2 -3 3 4 7 "vdd!" "In1" 8 0 "out" 7 56,30 "a_0_2#" 7 42,19
